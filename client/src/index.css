@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(222.2 84% 4.9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222.2 84% 4.9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222.2 84% 4.9%);
+  --primary: hsl(203.8863 88.2845% 53.1373%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 40% 98%);
+  --secondary-foreground: hsl(222.2 84% 4.9%);
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215.4 16.3% 46.9%);
+  --accent: hsl(210 40% 96%);
+  --accent-foreground: hsl(222.2 84% 4.9%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(214.3 31.8% 91.4%);
+  --input: hsl(214.3 31.8% 91.4%);
+  --ring: hsl(222.2 84% 4.9%);
+  --radius: 0.5rem;
+  --chart-1: hsl(12 76% 61%);
+  --chart-2: hsl(173 58% 39%);
+  --chart-3: hsl(197 37% 24%);
+  --chart-4: hsl(43 74% 66%);
+  --chart-5: hsl(27 87% 67%);
+  
+  /* Custom Budget Tracker Colors */
+  --blue-primary: hsl(202.8169 89.1213% 53.1373%);
+  --blue-light: hsl(202.8169 89.1213% 94.1176%);
+  --blue-dark: hsl(213.9535 88.2353% 44.7059%);
+  --blue-accent: hsl(198.6885 100% 50%);
+  --success: hsl(122.4000 39.3939% 49.0196%);
+  --danger: hsl(3.9024 83.4711% 58.2353%);
+  --gray-light: hsl(0 0% 96.0784%);
+  --gray-medium: hsl(0 0% 45.8824%);
+}
+
+.dark {
+  --background: hsl(222.2 84% 4.9%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222.2 84% 4.9%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222.2 84% 4.9%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(203.8863 88.2845% 53.1373%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(217.2 32.6% 17.5%);
+  --secondary-foreground: hsl(210 40% 98%);
+  --muted: hsl(217.2 32.6% 17.5%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(217.2 32.6% 17.5%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(217.2 32.6% 17.5%);
+  --input: hsl(217.2 32.6% 17.5%);
+  --ring: hsl(212.7 26.8% 83.9%);
+  --chart-1: hsl(220 70% 50%);
+  --chart-2: hsl(160 60% 45%);
+  --chart-3: hsl(30 80% 55%);
+  --chart-4: hsl(280 65% 60%);
+  --chart-5: hsl(340 75% 55%);
+  
+  /* Custom Budget Tracker Dark Colors */
+  --blue-primary: hsl(202.8169 89.1213% 53.1373%);
+  --blue-light: hsl(202.8169 89.1213% 20%);
+  --blue-dark: hsl(213.9535 88.2353% 35%);
+  --blue-accent: hsl(198.6885 100% 40%);
+  --success: hsl(122.4000 39.3939% 35%);
+  --danger: hsl(3.9024 83.4711% 45%);
+  --gray-light: hsl(0 0% 15%);
+  --gray-medium: hsl(0 0% 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer utilities {
+  .text-blue-primary {
+    color: var(--blue-primary);
+  }
+  .bg-blue-primary {
+    background-color: var(--blue-primary);
+  }
+  .hover\:bg-blue-primary:hover {
+    background-color: var(--blue-primary);
+  }
+  .text-blue-light {
+    color: var(--blue-light);
+  }
+  .bg-blue-light {
+    background-color: var(--blue-light);
+  }
+  .text-blue-dark {
+    color: var(--blue-dark);
+  }
+  .bg-blue-dark {
+    background-color: var(--blue-dark);
+  }
+  .hover\:bg-blue-dark:hover {
+    background-color: var(--blue-dark);
+  }
+  .text-blue-accent {
+    color: var(--blue-accent);
+  }
+  .bg-blue-accent {
+    background-color: var(--blue-accent);
+  }
+  .text-success {
+    color: var(--success);
+  }
+  .bg-success {
+    background-color: var(--success);
+  }
+  .text-danger {
+    color: var(--danger);
+  }
+  .bg-danger {
+    background-color: var(--danger);
+  }
+  .text-gray-light {
+    color: var(--gray-light);
+  }
+  .bg-gray-light {
+    background-color: var(--gray-light);
+  }
+  .text-gray-medium {
+    color: var(--gray-medium);
+  }
+  .bg-gray-medium {
+    background-color: var(--gray-medium);
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
